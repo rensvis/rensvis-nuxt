@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./general.scss";
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap");
+
+* {
+  overflow-wrap: break-word;
+  line-height: var(--lh);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+:root {
+  --swiper-theme-color: #fff !important;
+  --swiper-pagination-bullet-inactive-color: rgb(217, 217, 217) !important;
+}

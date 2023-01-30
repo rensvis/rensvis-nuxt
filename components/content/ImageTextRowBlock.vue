@@ -1,0 +1,34 @@
+<script>
+// defineProps(['imagePath', 'imagePosition', 'stretchImage']);
+
+export default {
+  props: {
+    imagePath: String,
+    imagePosition: {
+      type: String,
+      default: 'left',
+      required: false,
+    },
+    stretchImage: {
+      type: String,
+      default: 'false',
+      required: false,
+    },
+  },
+};
+</script>
+
+<template>
+  <section class="md:flex md:items-center">
+    <div class="basis-1/2" :class="{ 'md:order-2': imagePosition === 'right' }">
+      <nuxt-img class="object-cover mb-10 md:mb-0 w-full h-[20rem] sm:h-[30rem] md:h-[40rem] xl:h-[50rem]"
+        :class="{ 'md:max-w-md': stretchImage === 'false', 'ml-auto': imagePosition === 'left' }" format="webp"
+        quality="50" height="600" :src="imagePath" />
+    </div>
+    <div class="basis-1/2 ">
+      <div class="content-block px-10 md:p-10 lg:p-20 md:max-w-xl" :class="{ 'ml-auto': imagePosition === 'right' }">
+        <ContentSlot :use="$slots.default" />
+      </div>
+    </div>
+  </section>
+</template>

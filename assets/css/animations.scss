@@ -1,0 +1,93 @@
+@mixin enableFadeIn($delay: 0) {
+  opacity: 0;
+  animation: 1s calc(#{$delay} * 0.15s + 0.3s) fadeIn forwards;
+}
+
+.fade-transition {
+  opacity: 0;
+  //   transition: opacity 1s ease, transform 1s ease !important;
+
+  &.show {
+    animation: fadeIn 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+// hide content initially for run-in-view animation
+.run-in-view {
+  opacity: 0;
+}
+
+// fadeIn with optional argument, positive n for delay (1 gives delay of .15s, 2 gives .3s, etc.)
+@mixin enableFadeIn($delay: 0) {
+  opacity: 0;
+  animation: 1s calc(#{$delay} * 0.15s + 0s) fadeIn forwards;
+}
+
+// one by one fade in
+.obo-fi {
+  &__item {
+    opacity: 0;
+  }
+
+  &--in-view {
+    .obo-fi__item {
+      opacity: 1;
+
+      @for $i from 0 through 100 {
+        $delay: $i * 0.15;
+
+        &:nth-child(#{$i}) {
+          opacity: 0;
+          animation: 1s #{$delay}s fadeIn forwards;
+        }
+      }
+    }
+  }
+}
+
+.section-heading,
+.text-clip {
+  opacity: 0;
+
+  &--in-view {
+    opacity: 1;
+    animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  }
+}
+
+@keyframes text-clip {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@mixin headerTitleAnimation {
+  animation: titleShrink 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  // animation: titleShrink 3s 0s forwards;
+}
+
+@keyframes titleShrink {
+  from {
+    transform: scale(1.6);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}

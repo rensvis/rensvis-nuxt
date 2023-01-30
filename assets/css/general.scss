@@ -1,0 +1,12 @@
+.content-block {
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul {
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+  }
+}
