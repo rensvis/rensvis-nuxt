@@ -6,30 +6,41 @@ import { Pagination, } from 'swiper';
 
 
 export default {
+  props: {
+    imagePaths: {
+      type: Array,
+      required: true,
+    },
+    orientation: {
+      type: String,
+      default: 'landscape',
+      required: false,
+    },
+  },
   data() {
     return {
       swiperOptions: {
         breakpoints: {
           640: {
-            slidesPerView: 1.3,
+            slidesPerView: 1.2,
             spaceBetween: 20
           },
           768: {
-            slidesPerView: 1.4,
+            slidesPerView: 1.3,
             spaceBetween: 30
           },
 
           1024: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.4,
             spaceBetween: 30
           },
           1280: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.4,
             spaceBetween: 30
           },
           1536: {
-            slidesPerView: 2,
-            spaceBetween: 60
+            slidesPerView: 1.6,
+            spaceBetween: 40
           }
         }
       }
@@ -56,27 +67,18 @@ export default {
 </script>
 
 <template>
-  <section class="py-20 bg-neutral-900 md:py-24">
+  <section class="py-8 bg-gradient-to-b from-neutral-900 via-neutral-800 to-neutral-900 md:py-24">
     <div class="content-block">
-      <div class="max-w-5xl px-10 mx-auto">
-
-      </div>
-
       <swiper :slidesPerView="1.15" :spaceBetween="20" :centeredSlides="true" :modules="modules" :pagination="{
         dynamicBullets: true,
         clickable: true
       }" :breakpoints="swiperOptions.breakpoints">
-        <swiper-slide>
-          <nuxt-img src="/images/pages/home/surface-tablet.jpg" class="object-cover aspect-videoo"></nuxt-img>
+        {{ imagePaths }}
+        <swiper-slide v-for="imagePath in imagePaths" v-bind:key="imagePath">
+          <nuxt-img :src="imagePath" class="object-cover w-full"
+            :class="{ 'aspect-[5/3]': orientation === 'landscape', 'aspect-[3/5]': orientation === 'portrait' }"></nuxt-img>
         </swiper-slide>
-        <swiper-slide>
-          <nuxt-img src="/images/pages/home/surface-tablet.jpg" class="object-cover aspect-videoo"></nuxt-img>
-
-        </swiper-slide>
-
-        <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
-
       </swiper>
 
     </div>

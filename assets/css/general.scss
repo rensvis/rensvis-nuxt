@@ -5,8 +5,42 @@
   h6,
   p,
   ul {
-    &:not(:last-of-type) {
-      margin-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.content-block {
+  ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+  }
+  p a {
+    display: inline-block;
+    padding: 0 0.4rem;
+    transition: all 0.2s;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+
+    &:hover {
+      // background-color: rgb(255, 255, 255);
+      // color: black;
+      transform: scale(1.2);
     }
   }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.2s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
+.page-leave-to {
+  transform: translateY(10px);
+}
+.page-enter-from {
+  transform: translateY(-10px);
 }

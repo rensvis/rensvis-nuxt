@@ -35,8 +35,8 @@ export default {
 </script>
 
 <template>
-  <section class="py-20 bg-neutral-900 sm:py-28">
-    <div class="container px-0 mx-auto sm:px-10">
+  <section class="px-8 py-20 sm:py-28 sm:px-20 bg-gradient-to-b from-neutral-900 via-neutral-800 to-neutral-900">
+    <div class="mx-auto max-w-7xl">
       <div class="mb-10 sm:mb-14" :class="{ 'wrapper': landscapeRatio }">
         <iframe v-if="videoUrl" class="" :src="videoUrl">
         </iframe>

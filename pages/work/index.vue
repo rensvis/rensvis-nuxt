@@ -1,68 +1,67 @@
 <script>
+
 export default {
   data() {
     return {
-      category: '',
+      category: ''
     };
   },
   methods: {
     setCategory(category) {
       this.category = category;
-    },
-  },
+    }
+  }
 };
 </script>
 
 <template>
-  <ThePageHeader title="Work"></ThePageHeader>
-  <PageWrapper>
-    <Container>
-      <Spacer></Spacer>
+  <div>
+    <ThePageHeader title="Work"></ThePageHeader>
+    <PageWrapper>
+      <VerticalSpacer></VerticalSpacer>
       <PageIntro>Here's a quick look at projects I'm proud off.</PageIntro>
-      <Spacer></Spacer>
-      <div class="flex flex-wrap flex-col items-start lg:flex-row">
-        <button class="text-4xl lg:mr-8 mb-3" :class="{ 'font-bold': this.category === '' }"
+      <VerticalSpacer></VerticalSpacer>
+      <Container class="flex flex-col flex-wrap items-start lg:flex-row">
+        <button class="mb-3 text-4xl lg:mr-8" :class="{ 'font-bold': category === '' }"
           v-on:click="setCategory('')">All</button>
-        <button class="text-4xl lg:mx-8 mb-3" :class="{ 'font-bold': this.category === 'website' }"
+        <button class="mb-3 text-4xl lg:mx-8" :class="{ 'font-bold': category === 'website' }"
           v-on:click="setCategory('website')">Websites</button>
-        <button class="text-4xl lg:mx-8 mb-3" :class="{ 'font-bold': this.category === 'app' }"
+        <button class="mb-3 text-4xl lg:mx-8" :class="{ 'font-bold': category === 'app' }"
           v-on:click="setCategory('app')">Apps</button>
-        <button class="text-4xl lg:mx-8 mb-3" :class="{ 'font-bold': this.category === 'content' }"
+        <button class="mb-3 text-4xl lg:mx-8" :class="{ 'font-bold': category === 'content' }"
           v-on:click="setCategory('content')">Content</button>
-      </div>
-      <Spacer></Spacer>
+      </Container>
+      <VerticalSpacer></VerticalSpacer>
 
-      <ContentQuery path="/work" :where="{
-        type: { $contains: category }
-      }" v-slot="{ data }">
-        <ContentRenderer :value="data">
-          <ul class="case-list">
-            <li v-for="article in data" :key="article.slug" class="case-list__item">
-              <NuxtLink :to="article._path">
-                <article class="bg-black h-96 p-10 flex items-end justify-center">
-                  <h2 class="text-white text-center">
-                    {{ article.title }}
-                  </h2>
-                </article>
-              </NuxtLink>
-            </li>
-            <!-- <h1>{{ data }}</h1> -->
-          </ul>
-        </ContentRenderer>
-      </ContentQuery>
-
-
-    </Container>
-  </PageWrapper>
+      <section>
+        <Container class="">
+          <ContentQuery path="/work" :sort="{ date: -1 }" :where="{
+            type: { $contains: category }
+          }" v-slot="{ data }">
+            <ContentRenderer :value="data">
+              <!-- <div v-if="loading" class="max-w-md px-4 py-10 mx-auto text-center loader">
+            <span v-for="i in 10" v-bind:key="i" class="loader__part">/</span>
+          </div> -->
+              <TransitionGroup tag="ul" name="filter-articles" class="case-list">
+                <li v-for="article in data" :key="article._path" class="case-list__item">
+                  <WorkItemCard :title="article.title" :imagePath="article.imageSrc" :route="article._path">
+                  </WorkItemCard>
+                </li>
+              </TransitionGroup>
+            </ContentRenderer>
+          </ContentQuery>
+        </Container>
+      </section>
+    </PageWrapper>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-$offset: 35px;
-
 .case-list {
   --case-list-offset: 30px;
-  padding-top: calc(var(--case-list-offset));
   padding-bottom: 100px;
+  position: relative; // important for animation
+
 
   @media screen and (min-width: 1280px) {
     --case-list-offset: 50px;
@@ -72,34 +71,91 @@ $offset: 35px;
     --case-list-offset: 70px;
   }
 
-
   @media screen and (min-width: 1024px) {
-
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
-  // @media screen and (max-width: 1024px) {}
-}
+  &__item {
+    margin-bottom: var(--case-list-offset);
+    width: 100%;
+    position: relative;
+    z-index: 3;
 
-.case-list__item {
-  @media screen and (min-width: 1024px) {
-    flex-shrink: 0;
-    flex-basis: calc(50% - var(--case-list-offset)/2);
-    margin-bottom: 0px;
-
-    &:nth-child(odd) {
-      margin-top: calc(var(--case-list-offset) * -1);
+    @media screen and (min-width: 1024px) {
+      flex-shrink: 0;
+      flex-grow: 0;
+      width: calc(50% - var(--case-list-offset)/2);
     }
 
-    &:nth-child(even) {
-      margin-top: var(--case-list-offset);
-    }
   }
 
-  @media screen and (max-width: 1024px) {
-    margin-bottom: 30px;
+  // animations
+  /* 1. declare transition */
+  .filter-articles-move,
+  .filter-articles-enter-active,
+  .filter-articles-leave-active {
+    transition: all .6s cubic-bezier(0.55, 0, 0.1, 1);
+  }
+
+  .filter-articles-move {
+    z-index: 2;
+  }
+
+  .filter-articles-enter-active {
+    z-index: 1;
+  }
+
+  .filter-articles-leave-active {
+    z-index: 0;
+  }
+
+  /* 2. declare enter from and leave to state */
+  .filter-articles-enter-from,
+  .filter-articles-leave-to {
+    opacity: 0;
+    transform: scale(0.5) skew(20deg, 20deg);
+  }
+
+  /* 3. ensure leaving items are taken out of layout flow so that moving
+      animations can be calculated correctly. */
+  .filter-articles-leave-active {
+    position: absolute;
   }
 }
+
+// loader
+// .loader {
+//   --load-dur: .5s;
+//   --load-char-count: 10;
+
+//   &__part {
+//     animation: loadingCharBlink var(--load-dur) infinite;
+//   }
+
+//   @for $i from 1 to 10 {
+//     &__part:nth-child(#{$i}) {
+//       animation-delay: calc(#{$i} * var(--load-dur) / var(--load-char-count));
+//     }
+//   }
+
+//   @keyframes loadingCharBlink {
+//     0% {
+//       opacity: 1;
+//     }
+
+//     5% {
+//       opacity: 0;
+//     }
+
+//     10% {
+//       opacity: 1;
+//     }
+
+//     100% {
+//       opacity: 1;
+//     }
+//   }
+// }
 </style>

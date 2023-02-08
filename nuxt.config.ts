@@ -1,17 +1,22 @@
 export default {
-  modules: ["@nuxt/content", "@nuxt/image-edge"],
+  modules: ["@nuxt/content", "@nuxt/image-edge", "@vueuse/nuxt"],
   content: {},
   components: true,
-  // cant get this to work
-  // components: {
-  //   dirs: ["~/components", "~/components/templates"],
-  // },
-  css: ["~/assets/css/main.scss"],
-  plugins: ["~/plugins/swiper.client.js"],
+  css: [
+    "~/assets/css/main.scss",
+    "@fortawesome/fontawesome-svg-core/styles.css",
+  ],
+  plugins: ["~/plugins/swiper.client.js", "~/plugins/font-awesome.js"],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
+    },
+  },
+  app: {
+    pageTransition: {
+      name: "page",
+      mode: "out-in",
     },
   },
 };
