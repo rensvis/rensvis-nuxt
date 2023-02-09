@@ -19,4 +19,7 @@ export default {
       mode: "out-in",
     },
   },
+  image: {
+    provider: "netlify",
+  },
 };
