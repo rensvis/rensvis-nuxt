@@ -1,1 +1,2 @@
-public/images filter=lfs diff=lfs merge=lfs -text
+public/images/content filter=lfs diff=lfs merge=lfs -text
+public/images/pages filter=lfs diff=lfs merge=lfs -text
