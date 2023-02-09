@@ -9,7 +9,10 @@ export default {
 <template>
   <section>
     <Container class="relative md:max-w-2xl mt-14">
-      <img src="/images/svg/quote.svg" alt="quote" class="absolute h-40 opacity-10 left-8 md:-left-8 -top-20">
+      <LazyClientOnly>
+        <font-awesome-icon icon="fa-solid fa-quote-left"
+          class="text-[160px] absolute opacity-10 left-8 md:-left-8 -top-20" />
+      </LazyClientOnly>
       <blockquote class="text-lg font-bold">
         <ContentSlot :use="$slots.default" />
       </blockquote>

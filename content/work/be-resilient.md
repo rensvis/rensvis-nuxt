@@ -56,12 +56,11 @@ imagePaths: ['/images/content/be-resilient/mockup-services.jpg', '/images/conten
 ::vertical-spacer
 ::
 
-::testimonial-block{clientName="Sjaak van der Steen - Be Resilient Ministry"}
+<!-- ::testimonial-block{clientName="Sjaak van der Steen - Be Resilient Ministry"}
 Sunt commodo magna aute esse nisi nisi quis elit veniam. Proident anim sit laboris ad. Culpa cupidatat labore magna id veniam proident.
 ::
-
 ::vertical-spacer
-::
+:: -->
 
 ::image-text-row-block
 ---
