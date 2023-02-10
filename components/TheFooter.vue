@@ -42,9 +42,9 @@
     </div>
   </section>
 
-  <footer class="flex items-end justify-between px-10 pt-10 pb-10 md:pt-10 md:text-lg bg-neutral-200">
-    <div class="items-center min-[450px]:flex">
-      <div class="w-20 h-px mb-2 mr-4 bg-black min-[450px]:mb-0"></div>
+  <footer class="flex items-end justify-center px-10 pt-10 pb-10 sm:justify-between md:pt-10 md:text-lg bg-neutral-200">
+    <div class="flex items-center">
+      <div class="w-20 h-px mb-2 mr-4 bg-black min-[450px]:mb-0 hidden sm:block"></div>
       <p class="">copyright © {{ new Date().getFullYear() }} Rens Vis</p>
     </div>
     <div class="">
