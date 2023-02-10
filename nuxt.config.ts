@@ -14,6 +14,9 @@ export default {
     },
   },
   app: {
+    head: {
+      link: [{ rel: "icon", type: "image/png", href: "/favicon.ico" }],
+    },
     pageTransition: {
       name: "page",
       mode: "out-in",
