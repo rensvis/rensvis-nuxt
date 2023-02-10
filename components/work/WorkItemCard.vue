@@ -20,7 +20,7 @@ export default {
 <template>
   <NuxtLink :to="route" class="">
     <HoverCard>
-      <article class="relative flex items-end block p-10 bg-black shadow-2xl h-fit">
+      <article class="relative flex items-end p-10 bg-black shadow-2xl h-fit">
         <nuxt-img class="absolute inset-0 z-0 object-cover w-full h-full" :src="imagePath" format="webp" quality="85"
           height="400" />
         <div class="absolute inset-0 bg-black bg-opacity-25"></div>

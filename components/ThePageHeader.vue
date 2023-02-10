@@ -33,8 +33,8 @@ export default {
         <div class="flex flex-col justify-between md:flex-row md:items-end">
           <h1 class="text-5xl font-bold md:text-7xl lg:text-8xl 2xl:text-9xl shrink" v-html="title">
           </h1>
-          <nuxt-img v-if="showImage" class="mt-10 ml-auto shrink-0 md:ml-10 md:mt-0" format="webp" width="240"
-            quality="50" src="/images/pages/home/rens-black-white.jpg" />
+          <nuxt-img v-if="showImage" class="mt-10 ml-auto shrink-0 md:ml-10 md:mt-0" width="240"
+            src="/images/pages/home/rens-black-white.jpg" />
         </div>
       </Container>
     </section>

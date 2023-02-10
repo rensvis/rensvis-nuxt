@@ -3,7 +3,7 @@ title: Piccy
 description: An overview of a photo sharing app called Piccy.
 type: ["app"]
 date: 2022-01-31
-imageSrc: /images/content/piccy/mockup-collage.png
+imageSrc: /images/content/piccy/mockup-collage.jpg
 featured: true
 ---
 
@@ -24,7 +24,7 @@ url: https://piccy.app
 
 ::image-text-row-block
 ---
-imagePath: /images/content/piccy/mockup-collage.png
+imagePath: /images/content/piccy/mockup-collage.jpg
 imagePosition: left
 stretchImage: true
 ---

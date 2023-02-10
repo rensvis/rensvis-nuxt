@@ -3,7 +3,7 @@ title: Be Resilient
 description: An overview of the website I've built for Be Resilient Ministry.
 type: ["website"]
 date: 2023-01-23
-imageSrc: /images/content/be-resilient/featured-image.png
+imageSrc: /images/content/be-resilient/featured-image.jpg
 featured: true
 ---
 
@@ -24,7 +24,7 @@ url: https://beresilientministry.nl
 
 ::image-text-row-block
 ---
-imagePath: /images/content/be-resilient/featured-image.png
+imagePath: /images/content/be-resilient/featured-image.jpg
 imagePosition: left
 stretchImage: true
 ---

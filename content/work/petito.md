@@ -87,7 +87,7 @@ imagePaths: [
 
 ::image-text-row-block
 ---
-imagePath: /images/content/petito/petito-menu-backend.png
+imagePath: /images/content/petito/petito-menu-backend.jpg
 imagePosition: right
 stretchImage: true
 ---

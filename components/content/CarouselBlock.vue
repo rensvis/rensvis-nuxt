@@ -76,7 +76,8 @@ export default {
         {{ imagePaths }}
         <swiper-slide v-for="imagePath in imagePaths" v-bind:key="imagePath">
           <nuxt-img :src="imagePath" class="object-cover w-full"
-            :class="{ 'aspect-[5/3]': orientation === 'landscape', 'aspect-[3/5]': orientation === 'portrait' }"></nuxt-img>
+            :class="{ 'aspect-[5/3]': orientation === 'landscape', 'aspect-[3/5]': orientation === 'portrait' }"
+            height="800"></nuxt-img>
         </swiper-slide>
         <div class="swiper-pagination"></div>
       </swiper>
