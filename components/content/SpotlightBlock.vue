@@ -40,7 +40,7 @@ export default {
       <div class="mb-10 sm:mb-14" :class="{ 'wrapper': landscapeRatio }">
         <iframe v-if="videoUrl" class="" :src="videoUrl">
         </iframe>
-        <nuxt-img v-else :src="imagePath" height="1000"></nuxt-img>
+        <nuxt-img v-else :src="imagePath"></nuxt-img>
       </div>
       <div class="px-10 text-xs text-center text-neutral-100">
         <p>{{ bottomText }}</p>

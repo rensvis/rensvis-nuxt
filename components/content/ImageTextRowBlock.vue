@@ -20,7 +20,7 @@ export default {
   <section class="md:flex md:items-center">
     <div class="basis-1/2" :class="{ 'md:order-2': imagePosition === 'right' }">
       <nuxt-img class="object-cover mb-10 md:mb-0 w-full h-[20rem] sm:h-[30rem] md:h-[40rem] xl:h-[50rem] shadow-2xl"
-        :class="{ 'md:max-w-md': !stretchImage, 'ml-auto': imagePosition === 'left' }" height="1000" :src="imagePath" />
+        :class="{ 'md:max-w-md': !stretchImage, 'ml-auto': imagePosition === 'left' }" :src="imagePath" />
     </div>
     <div class="basis-1/2 ">
       <div class="px-10 content-block md:p-10 lg:p-20 md:max-w-xl" :class="{ 'ml-auto': imagePosition === 'right' }">
