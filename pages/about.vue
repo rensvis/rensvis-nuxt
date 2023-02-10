@@ -20,21 +20,23 @@ export default {
           <div class="px-6 mb-10 text-center shrink-0 md:mr-8 h-fit md:mb-0">
             <nuxt-img class="object-cover object-top w-40 max-w-full mx-auto mb-6 rounded-full aspect-square"
               src="/images/pages/about/rens-flowers.jpg" alt="Rens in a field of flowers" />
-            <h3 class="mb-1 text-2xl font-semibold ">Rens Vis</h3>
+            <h2 class="mb-1 text-2xl font-semibold ">Rens Vis</h2>
             <p class="mb-3">Web Designer / Developer</p>
             <div class="flex justify-center text-xl">
-              <a href="https://github.com/rensvis" target="_blank" class="flex items-center mx-2 md:my-0">
+              <a href="https://github.com/rensvis" target="_blank" aria-label="GitHub"
+                class="flex items-center mx-2 md:my-0">
                 <ClientOnly>
                   <font-awesome-icon icon="fa-brands fa-github" class="" />
                 </ClientOnly>
               </a>
-              <a href="https://www.linkedin.com/in/rens-vis-9218a9174/" target="_blank"
+              <a href="https://www.linkedin.com/in/rens-vis-9218a9174/" target="_blank" aria-label="LinkedIn"
                 class="flex items-center mx-2 md:my-0">
                 <ClientOnly>
                   <font-awesome-icon icon="fa-brands fa-linkedin" class="" />
                 </ClientOnly>
               </a>
-              <a href="https://www.instagram.com/rensvis" target="_blank" class="flex items-center mx-2 md:my-0">
+              <a href="https://www.instagram.com/rensvis" target="_blank" aria-label="Instagram"
+                class="flex items-center mx-2 md:my-0">
                 <ClientOnly>
                   <font-awesome-icon icon="fa-brands fa-instagram" class="" />
                 </ClientOnly>
