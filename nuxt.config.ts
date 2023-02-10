@@ -15,6 +15,9 @@ export default {
   },
   app: {
     head: {
+      htmlAttrs: {
+        lang: "en",
+      },
       link: [{ rel: "icon", type: "image/png", href: "/favicon.ico" }],
     },
     pageTransition: {

@@ -4,12 +4,12 @@ export default {
     /**
      * URL to the video to display.
      */
-    'videoUrl': {
-      type: String,
+    'video': {
+      type: Object,
       required: false,
     },
     /**
-     * Path to the image to display.
+     * Path to and alt of the image to display.
      */
     'image': {
       type: Object,
@@ -38,7 +38,7 @@ export default {
   <section class="px-8 py-20 sm:py-28 sm:px-20 bg-gradient-to-b from-neutral-900 via-neutral-800 to-neutral-900">
     <div class="mx-auto max-w-7xl">
       <div class="mb-10 sm:mb-14" :class="{ 'wrapper': landscapeRatio }">
-        <iframe v-if="videoUrl" class="" :src="videoUrl">
+        <iframe v-if="video" class="" :src="video.url" :title="video.title">
         </iframe>
         <nuxt-img v-else :src="image.path" :alt="image.alt"></nuxt-img>
       </div>

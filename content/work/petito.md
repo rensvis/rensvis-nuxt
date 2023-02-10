@@ -50,7 +50,10 @@ The current website was in need of an update. It needed a fresh look and do bett
 
 ::spotlight-block
 ---
-videoUrl: https://www.youtube.com/embed/m9l6UNhA-kQ
+video: {
+  url: https://www.youtube.com/embed/m9l6UNhA-kQ,
+  title: 'Petito Noordwijk Sfeerimpressie'
+  }
 bottomText: I spent a morning filming around the restaurant and made this short video that loops on the home page. 🎬
 ---
 ::
