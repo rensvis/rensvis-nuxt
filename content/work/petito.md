@@ -44,7 +44,7 @@ The current website was in need of an update. It needed a fresh look and do bett
 
 ::spotlight-block
 ---
-videoUrl: https://petitonoordwijk.nl/wp-content/uploads/2021/06/2021-Petito-site-background-COMPRESSED.mp4
+videoUrl: https://www.youtube.com/embed/m9l6UNhA-kQ
 bottomText: I spent a morning filming around the restaurant and made this short video that loops on the home page. 🎬
 ---
 ::
