@@ -10,6 +10,10 @@
 }
 
 .content-block {
+  p:last-child,
+  ul:last-child {
+    margin-bottom: 0;
+  }
   ul {
     list-style: disc;
     margin-left: 1.5rem;

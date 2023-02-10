@@ -1,12 +1,36 @@
-<script setup>
-const { path } = useRoute();
+<!-- <script setup>
+// const { path } = useRoute();
+const array = ['/work/be-resilient', '/work/petito', '/work/piccy'];
+const path = array[Math.floor(Math.random() * array.length)];
 const { data } = await useAsyncData('home', () => queryContent('/').where({ _path: path }).findOne());
+const articleData = data;
+</script> -->
+
+<script>
+export default {
+  async setup() {
+    const route = useRoute();
+    const { path } = route;
+    const { data } = await useAsyncData('home', () => queryContent('/').where({ _path: path }).findOne());
+    const articleData = data;
+    return { articleData };
+  },
+  data() {
+    return {
+      /**
+       * store the current route path to exclude it from the related articles (and not update on route change
+       * to avoid rebuild)
+       */
+      routePath: this.$route.path,
+    };
+  }
+};
 </script>
 
 <template>
   <div>
 
-    <ThePageHeader :title="data?.title + '.'"></ThePageHeader>
+    <ThePageHeader :title="articleData?.title + '.'"></ThePageHeader>
     <PageWrapper>
       <article class="">
         <ContentDoc />
@@ -18,7 +42,7 @@ const { data } = await useAsyncData('home', () => queryContent('/').where({ _pat
       </Container>
       <!-- TODO: add date sorting -->
       <ContentQuery path="/work" :where="{
-        _path: { $ne: data['_path'] }
+        _path: { $ne: routePath }
       }" :limit="2" v-slot="{ data }">
         <ContentRenderer :value="data">
           <Container class=" md:flex">
@@ -32,6 +56,7 @@ const { data } = await useAsyncData('home', () => queryContent('/').where({ _pat
           </Container>
         </ContentRenderer>
       </ContentQuery>
+
       <VerticalSpacer></VerticalSpacer>
 
     </PageWrapper>
