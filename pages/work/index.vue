@@ -16,6 +16,12 @@ export default {
 
 <template>
   <div>
+
+    <Head>
+      <Title>Work - Rens Vis</Title>
+      <Meta name="description" content="Here's a quick look at projects I'm proud off." />
+    </Head>
+
     <ThePageHeader title="Work"></ThePageHeader>
     <PageWrapper>
       <VerticalSpacer></VerticalSpacer>

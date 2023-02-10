@@ -1,3 +1,15 @@
+<!-- <script setup>
+const title = ref('Rens Vis');
+const description = ref('Rens Vis, Designer & Developer');
+useHead({
+  title,
+  meta: [{
+    name: 'description',
+    content: description
+  }]
+});
+</script> -->
+
 <script>
 export default {
 };
@@ -5,6 +17,12 @@ export default {
 
 <template>
   <div>
+
+    <Head>
+      <Title>Rens Vis</Title>
+      <Meta name="description" content="Rens Vis, Designer & Developer" />
+    </Head>
+
     <ThePageHeader :showImage="true"></ThePageHeader>
     <PageWrapper>
       <Container class="">

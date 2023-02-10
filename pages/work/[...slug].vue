@@ -5,6 +5,7 @@ const { data } = await useAsyncData('home', () => queryContent('/').where({ _pat
 
 <template>
   <div>
+
     <ThePageHeader :title="data?.title + '.'"></ThePageHeader>
     <PageWrapper>
       <article class="">
