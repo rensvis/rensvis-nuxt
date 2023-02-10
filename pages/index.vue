@@ -15,15 +15,15 @@ export default {
           <ContentRenderer :value="data">
             <ul class="content-list">
               <li class="content-list__item">
-                <WorkItemCard :title="data[0].title" :imagePath="data[0].imageSrc" :route="data[0]._path">
+                <WorkItemCard :title="data[0].title" :image="data[0].image" :route="data[0]._path">
                 </WorkItemCard>
               </li>
               <li class="content-list__item">
-                <WorkItemCard :title="data[1].title" :imagePath="data[1].imageSrc" :route="data[1]._path">
+                <WorkItemCard :title="data[1].title" :image="data[1].image" :route="data[1]._path">
                 </WorkItemCard>
               </li>
               <li class="content-list__item">
-                <WorkItemCard :title="data[2].title" :imagePath="data[2].imageSrc" :route="data[2]._path">
+                <WorkItemCard :title="data[2].title" :image="data[2].image" :route="data[2]._path">
                 </WorkItemCard>
               </li>
             </ul>

@@ -44,7 +44,7 @@ export default {
           </div> -->
               <TransitionGroup tag="ul" name="filter-articles" class="case-list">
                 <li v-for="article in data" :key="article._path" class="case-list__item">
-                  <WorkItemCard :title="article.title" :imagePath="article.imageSrc" :route="article._path">
+                  <WorkItemCard :title="article.title" :image="article.image" :route="article._path">
                   </WorkItemCard>
                 </li>
               </TransitionGroup>

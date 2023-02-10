@@ -12,7 +12,7 @@ export default {
         <Container class="max-w-5xl md:flex">
           <div class="px-6 mb-10 text-center shrink-0 md:mr-8 h-fit md:mb-0">
             <nuxt-img class="object-cover object-top w-40 max-w-full mx-auto mb-6 rounded-full aspect-square"
-              src="/images/pages/about/rens-flowers.jpg" />
+              src="/images/pages/about/rens-flowers.jpg" alt="Rens in a field of flowers" />
             <h3 class="mb-1 text-2xl font-semibold ">Rens Vis</h3>
             <p class="mb-3">Web Designer / Developer</p>
             <div class="flex justify-center text-xl">

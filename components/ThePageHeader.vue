@@ -34,7 +34,7 @@ export default {
           <h1 class="text-5xl font-bold md:text-7xl lg:text-8xl 2xl:text-9xl shrink" v-html="title">
           </h1>
           <nuxt-img v-if="showImage" class="mt-10 ml-auto shrink-0 md:ml-10 md:mt-0 w-[240px] h-[320px]"
-            src="/images/pages/home/rens-black-white.jpg" />
+            src="/images/pages/home/rens-black-white.jpg" alt="Rens in black and white" />
         </div>
       </Container>
     </section>

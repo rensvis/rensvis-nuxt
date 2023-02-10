@@ -7,8 +7,8 @@ import { Pagination, } from 'swiper';
 
 export default {
   props: {
-    imagePaths: {
-      type: Array,
+    images: {
+      type: Object,
       required: true,
     },
     orientation: {
@@ -73,10 +73,10 @@ export default {
         dynamicBullets: true,
         clickable: true
       }" :breakpoints="swiperOptions.breakpoints">
-        {{ imagePaths }}
-        <swiper-slide v-for="imagePath in imagePaths" v-bind:key="imagePath">
-          <nuxt-img :src="imagePath" class="object-cover w-full"
-            :class="{ 'aspect-[5/3]': orientation === 'landscape', 'aspect-[3/5]': orientation === 'portrait' }"></nuxt-img>
+        <swiper-slide v-for="image in images" v-bind:key="image.path">
+          <nuxt-img :src="image.path" class="object-cover w-full"
+            :class="{ 'aspect-[5/3]': orientation === 'landscape', 'aspect-[3/5]': orientation === 'portrait' }"
+            :alt="image.alt"></nuxt-img>
         </swiper-slide>
         <div class="swiper-pagination"></div>
       </swiper>

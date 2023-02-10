@@ -22,11 +22,11 @@ const { data } = await useAsyncData('home', () => queryContent('/').where({ _pat
         <ContentRenderer :value="data">
           <Container class=" md:flex">
 
-            <WorkItemCard class="block mb-10 sm:basis-1/2 md:mr-3 md:mb-0" :title="data[0].title"
-              :imagePath="data[0].imageSrc" :route="data[0]._path"></WorkItemCard>
+            <WorkItemCard class="block mb-10 sm:basis-1/2 md:mr-3 md:mb-0" :title="data[0].title" :image="data[0].image"
+              :route="data[0]._path"></WorkItemCard>
 
-            <WorkItemCard class="block sm:basis-1/2 md:ml-3 md:mt-20" :title="data[1].title"
-              :imagePath="data[1].imageSrc" :route="data[1]._path"></WorkItemCard>
+            <WorkItemCard class="block sm:basis-1/2 md:ml-3 md:mt-20" :title="data[1].title" :image="data[1].image"
+              :route="data[1]._path"></WorkItemCard>
 
           </Container>
         </ContentRenderer>

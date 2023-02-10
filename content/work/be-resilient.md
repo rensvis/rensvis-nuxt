@@ -3,7 +3,10 @@ title: Be Resilient
 description: An overview of the website I've built for Be Resilient Ministry.
 type: ["website"]
 date: 2023-01-23
-imageSrc: /images/content/be-resilient/featured-image.jpg
+image: {
+  path: /images/content/be-resilient/featured-image.jpg,
+  alt: 'Be Resilient collage of website highlights'
+}
 featured: true
 ---
 
@@ -24,7 +27,10 @@ url: https://beresilientministry.nl
 
 ::image-text-row-block
 ---
-imagePath: /images/content/be-resilient/featured-image.jpg
+image: {
+  path: /images/content/be-resilient/featured-image.jpg,
+  alt: 'Be Resilient collage of website highlights'
+}
 imagePosition: left
 stretchImage: true
 ---
@@ -49,7 +55,20 @@ Be Resilient needed a website to connect with a wider audience, share informatio
 ::carousel-block
 ---
 orientation: landscape
-imagePaths: ['/images/content/be-resilient/mockup-services.jpg', '/images/content/be-resilient/mockup-blog.jpg', '/images/content/be-resilient/mockup-newsletter.jpg']
+images: [
+  {
+    path: '/images/content/be-resilient/mockup-services.jpg',
+    alt: 'Be Resilient services'
+  },
+  {
+    path: '/images/content/be-resilient/mockup-blog.jpg',
+    alt: 'Be Resilient blog'
+  },
+  {
+    path: '/images/content/be-resilient/mockup-newsletter.jpg',
+    alt: 'Be Resilient newsletter'
+  },
+]
 ---
 ::
 
@@ -64,7 +83,10 @@ Sunt commodo magna aute esse nisi nisi quis elit veniam. Proident anim sit labor
 
 ::image-text-row-block
 ---
-imagePath: /images/content/be-resilient/mockup-home-1.jpg 
+image: {
+  path: /images/content/be-resilient/mockup-home-1.jpg,
+  alt: 'Be Resilient home page'
+}
 imagePosition: left
 stretchImage: false
 ---

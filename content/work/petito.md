@@ -3,7 +3,10 @@ title: Petito Noordwijk
 description: An overview of the website I've built for Petito Noordwijk.
 type: ["website", "content"]
 date: 2021-06-30
-imageSrc: /images/content/petito/customer-coffee.jpeg
+image: {
+  path: /images/content/petito/customer-coffee.jpeg,
+  alt: 'A customer drinking coffee out of a cup that has the Petito logo on it'
+}
 featured: false
 ---
 
@@ -24,7 +27,10 @@ url: https://petitonoordwijk.nl
 
 ::image-text-row-block
 ---
-imagePath: /images/content/petito/customer-coffee.jpeg
+image: {
+  path: /images/content/petito/customer-coffee.jpeg,
+  alt: 'A customer drinking coffee out of a cup that has the Petito logo on it'
+}
 imagePosition: left
 stretchImage: true
 ---
@@ -63,17 +69,47 @@ It's no secret that I love playing around with camera's. I spent a morning takin
 ::carousel-block
 ---
 orientation: landscape
-imagePaths: [
-  '/images/content/petito/carousel/menu-front.jpeg', 
-  '/images/content/petito/carousel/petito-closeup.jpeg',
-  '/images/content/petito/carousel/petitos-in-box.jpeg',
-  '/images/content/petito/carousel/server.jpeg',
-  '/images/content/petito/carousel/servers-smiling.jpeg',
-  '/images/content/petito/carousel/menu.jpeg',
-  '/images/content/petito/carousel/sandwich.jpeg',
-  '/images/content/petito/carousel/light-bulbs.jpeg',
-  '/images/content/petito/carousel/owners.jpeg',
-  '/images/content/petito/carousel/interior-clock.jpeg', 
+images: [
+  {
+    path: '/images/content/petito/carousel/menu-front.jpeg',
+    alt: 'Petito menu front'
+  },
+  {
+    path: '/images/content/petito/carousel/petito-closeup.jpeg',
+    alt: 'Petito small sandwich closeup'
+  },
+  {
+    path: '/images/content/petito/carousel/petitos-in-box.jpeg',
+    alt: 'Petito sandwiches in delivery box'
+  },
+  {
+    path: '/images/content/petito/carousel/server.jpeg',
+    alt: 'Petito server'
+  },
+  {
+    path: '/images/content/petito/carousel/servers-smiling.jpeg',
+    alt: 'Petito servers smiling'
+  },
+  {
+    path: '/images/content/petito/carousel/menu.jpeg',
+    alt: 'Petito customer looking at menu and server serving drinks'
+  },
+  {
+    path: '/images/content/petito/carousel/sandwich.jpeg',
+    alt: 'Petito large sandwich closeup'
+  },
+  {
+    path: '/images/content/petito/carousel/light-bulbs.jpeg',
+    alt: 'Petito decorative light bulbs outside'
+  },
+  {
+    path: '/images/content/petito/carousel/owners.jpeg',
+    alt: 'Petito owners smiling'
+  },
+  {
+    path: '/images/content/petito/carousel/interior-clock.jpeg',
+    alt: 'Petito interior clock'
+  },
   ]
 ---
 ::
@@ -87,7 +123,10 @@ imagePaths: [
 
 ::image-text-row-block
 ---
-imagePath: /images/content/petito/petito-menu-backend.jpg
+image: {
+  path: /images/content/petito/petito-menu-backend.jpg,
+  alt: 'A look at the backend that easily lets website admins adjust the menu section'
+}
 imagePosition: right
 stretchImage: true
 ---
@@ -102,7 +141,10 @@ Petito changes up their menu regularly, for example when certain ingredients com
 
 ::image-text-row-block
 ---
-imagePath: /images/content/petito/mockup-mobile-home.jpg 
+image: {
+  path: /images/content/petito/mockup-mobile-home.jpg,
+  alt: 'Petito home page on mobile'
+}
 imagePosition: left
 stretchImage: false
 ---

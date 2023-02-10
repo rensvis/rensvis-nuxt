@@ -3,7 +3,10 @@ title: Debora Consultancy
 description: An overview of the website I've built for Debora Consultancy.
 type: ["website"]
 date: 2022-08-30
-imageSrc: /images/content/debora-consultancy/mockup-debora-coffee.jpg
+image: {
+  path: /images/content/debora-consultancy/mockup-debora-coffee.jpg,
+  alt: 'Debora Consultancy home page'
+}
 featured: false
 ---
 
@@ -25,7 +28,10 @@ url: https://deboraconsultancy.nl
 
 ::image-text-row-block
 ---
-imagePath: /images/content/debora-consultancy/mockup-debora-coffee.jpg 
+image: {
+  path: /images/content/debora-consultancy/mockup-debora-coffee.jpg,
+  alt: 'Debora Consultancy home page'
+}
 imagePosition: left
 stretchImage: true
 ---
@@ -49,7 +55,20 @@ When Debora reached out she was just about to start her journey in freelancing. 
 ::carousel-block
 ---
 orientation: landscape
-imagePaths: ['/images/content/debora-consultancy/mockup-about.jpg', '/images/content/debora-consultancy/mockup-kernwoorden.jpg', '/images/content/debora-consultancy/mockup-contact.jpg']
+images: [
+  {
+    path: '/images/content/debora-consultancy/mockup-about.jpg',
+    alt: 'Debora Consultancy about'
+    },
+  {
+    path: '/images/content/debora-consultancy/mockup-kernwoorden.jpg', 
+    alt: 'Debora Consultancy keywords'
+  },
+  {
+    path: '/images/content/debora-consultancy/mockup-contact.jpg',
+    alt: 'Debora Consultancy contact'
+  }
+]
 ---
 ::
 
@@ -65,7 +84,10 @@ Rens is a very skilled and pleasant web designer. He made my website fast and it
 
 ::image-text-row-block
 ---
-imagePath: /images/content/debora-consultancy/debora-writing.jpg 
+image: {
+  path: /images/content/debora-consultancy/debora-writing.jpg,
+  alt: 'Debora writing on a notepad'
+}
 imagePosition: left 
 stretchImage: true
 ---
