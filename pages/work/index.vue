@@ -27,7 +27,7 @@ export default {
       <VerticalSpacer></VerticalSpacer>
       <PageIntro>Here's a quick look at projects I'm proud off.</PageIntro>
       <VerticalSpacer></VerticalSpacer>
-      <Container class="flex flex-col flex-wrap items-start lg:flex-row">
+      <Container class="flex flex-col flex-wrap items-start mb-8 lg:mb-10 lg:flex-row">
         <button class="mb-3 text-4xl lg:mr-8" :class="{ 'font-bold': category === '' }"
           v-on:click="setCategory('')">All</button>
         <button class="mb-3 text-4xl lg:mx-8" :class="{ 'font-bold': category === 'website' }"
@@ -37,7 +37,6 @@ export default {
         <button class="mb-3 text-4xl lg:mx-8" :class="{ 'font-bold': category === 'content' }"
           v-on:click="setCategory('content')">Content</button>
       </Container>
-      <VerticalSpacer></VerticalSpacer>
 
       <section>
         <Container class="">
