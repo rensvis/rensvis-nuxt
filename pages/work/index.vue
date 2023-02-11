@@ -19,13 +19,13 @@ export default {
 
     <Head>
       <Title>Work - Rens Vis</Title>
-      <Meta name="description" content="Here's a quick look at projects I'm proud off." />
+      <Meta name="description" content="Here's a quick look at projects I'm proud of." />
     </Head>
 
     <ThePageHeader title="Work"></ThePageHeader>
     <PageWrapper>
       <VerticalSpacer></VerticalSpacer>
-      <PageIntro>Here's a quick look at projects I'm proud off.</PageIntro>
+      <PageIntro>Here's a quick look at projects I'm proud of.</PageIntro>
       <VerticalSpacer></VerticalSpacer>
       <Container class="flex flex-col flex-wrap items-start mb-8 lg:mb-10 lg:flex-row">
         <button class="mb-3 text-4xl lg:mr-8" :class="{ 'font-bold': category === '' }"
