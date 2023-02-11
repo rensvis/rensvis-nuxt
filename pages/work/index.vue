@@ -22,7 +22,7 @@ export default {
       <Meta name="description" content="Here's a quick look at projects I'm proud of." />
     </Head>
 
-    <ThePageHeader title="Work"></ThePageHeader>
+    <ThePageHeader title="Work."></ThePageHeader>
     <PageWrapper>
       <VerticalSpacer></VerticalSpacer>
       <PageIntro>Here's a quick look at projects I'm proud of.</PageIntro>

@@ -12,7 +12,7 @@ export default {
         content="Hey there! I'm a web designer and developer based in the beachy town of Katwijk aan Zee, The Netherlands. I'm all about creativity and having an active lifestyle, whether it's traveling and surfing or building amazing websites and apps." />
     </Head>
 
-    <ThePageHeader title="About"></ThePageHeader>
+    <ThePageHeader title="About."></ThePageHeader>
     <PageWrapper>
       <section>
         <VerticalSpacer></VerticalSpacer>
