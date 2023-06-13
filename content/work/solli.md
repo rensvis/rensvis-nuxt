@@ -71,7 +71,7 @@ images: [
     alt: 'Solli posters'
   },
   {
-    path: '/images/content/solli/stories.jpg',
+    path: '/images/content/solli/stories-1.jpg',
     alt: 'Solli Instagram stories'
   },
 ]
