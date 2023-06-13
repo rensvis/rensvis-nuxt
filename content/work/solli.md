@@ -38,7 +38,7 @@ stretchImage: true
 
 Solli is a handy job-search platform tailored just for those between 15 and 21. With some handy filters, you can **easily find jobs** that are right around the corner. It’s easy on the eyes with a modern, clean design.
 
-As for branding, Solli boasts a playful logo and a consistent social media branding style resonates with the target audience.
+As for branding, Solli boasts a playful logo and a consistent social media style that resonates with the target audience.
 
 
 ::
