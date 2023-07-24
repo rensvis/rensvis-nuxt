@@ -2,6 +2,16 @@
 </script>
 
 <template>
+  <section>
+    <VerticalSpacer></VerticalSpacer>
+    <Container class="max-w-3xl">
+      <h2 class="mb-8 text-4xl text-centerr">FAQ.</h2>
+      <Faq></Faq>
+    </Container>
+    <VerticalSpacer></VerticalSpacer>
+  </section>
+
+
   <section
     class="relative z-10 px-10 py-24 text-center text-white bg-gradient-to-r from-black via-neutral-800 to-black cta">
     <h2 class="mb-8 text-4xl">Get in touch.</h2>
@@ -42,9 +52,10 @@
     </div>
   </section>
 
-  <footer class="flex items-end justify-center px-10 pt-10 pb-10 sm:justify-between md:pt-10 md:text-lg bg-neutral-200">
+  <footer
+    class="flex items-end justify-center px-10 pt-10 pb-10 text-neutral-200 bg-neutral-900 sm:justify-between md:pt-10 md:text-lg">
     <div class="flex items-center">
-      <div class="w-20 h-px mb-2 mr-4 bg-black min-[450px]:mb-0 hidden sm:block"></div>
+      <div class="w-20 h-px mb-2 mr-4 min-[450px]:mb-0 hidden sm:block"></div>
       <p class="">copyright © {{ new Date().getFullYear() }} Rens Vis</p>
     </div>
     <div class="">

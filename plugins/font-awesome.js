@@ -6,6 +6,7 @@ import {
   faEnvelope,
   faPhone,
   faQuoteLeft,
+  faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
@@ -23,7 +24,8 @@ library.add(
   faWhatsapp,
   faGithub,
   faPhone,
-  faQuoteLeft
+  faQuoteLeft,
+  faPlus
 );
 
 config.autoAddCss = false;
