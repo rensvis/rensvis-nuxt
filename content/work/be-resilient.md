@@ -7,7 +7,7 @@ image: {
   path: /images/content/be-resilient/featured-image.jpg,
   alt: 'Be Resilient collage of website highlights'
 }
-featured: true
+featured: false
 ---
 
 ::vertical-spacer
