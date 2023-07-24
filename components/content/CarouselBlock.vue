@@ -67,7 +67,7 @@ export default {
 </script>
 
 <template>
-  <section class="py-8 bg-gradient-to-b from-neutral-900 via-neutral-800 to-neutral-900 md:py-24">
+  <section class="py-8 md:py-24">
     <div class="content-block">
       <swiper :slidesPerView="1.15" :spaceBetween="20" :centeredSlides="true" :modules="modules" :pagination="{
         dynamicBullets: true,

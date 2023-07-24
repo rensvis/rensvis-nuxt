@@ -35,14 +35,14 @@ export default {
 </script>
 
 <template>
-  <section class="px-8 py-20 sm:py-28 sm:px-20 bg-gradient-to-b from-neutral-900 via-neutral-800 to-neutral-900">
+  <section class="py-20 md:px-8 sm:py-28">
     <div class="mx-auto max-w-7xl">
       <div class="mb-10 sm:mb-14" :class="{ 'wrapper': landscapeRatio }">
         <iframe v-if="video" class="" :src="video.url" :title="video.title">
         </iframe>
         <nuxt-img v-else :src="image.path" :alt="image.alt"></nuxt-img>
       </div>
-      <div class="px-10 text-xs text-center text-neutral-100">
+      <div class="px-10 text-xs text-center text-neutral-700">
         <p>{{ bottomText }}</p>
       </div>
     </div>
