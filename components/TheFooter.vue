@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <Testimonials></Testimonials>
+  <!-- <Testimonials></Testimonials> -->
 
   <section>
     <VerticalSpacer></VerticalSpacer>

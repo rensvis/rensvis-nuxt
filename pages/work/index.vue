@@ -19,13 +19,13 @@ export default {
 
     <Head>
       <Title>Work - Rens Vis</Title>
-      <Meta name="description" content="Here's a quick look at projects I'm proud of." />
+      <Meta name="description" content="An overview of projects I'm proud of." />
     </Head>
 
     <ThePageHeader title="Work."></ThePageHeader>
     <PageWrapper>
       <VerticalSpacer></VerticalSpacer>
-      <PageIntro>Here's a quick look at projects I'm proud of.</PageIntro>
+      <PageIntro>An overview of projects I'm proud of.</PageIntro>
       <VerticalSpacer></VerticalSpacer>
       <Container class="flex flex-col flex-wrap items-start mb-8 lg:mb-10 lg:flex-row">
         <button class="mb-3 text-4xl lg:mr-8" :class="{ 'font-bold': category === '' }"
@@ -41,7 +41,7 @@ export default {
       <section>
         <Container class="">
           <ContentQuery path="/work" :sort="{ date: -1 }" :where="{
-            type: { $contains: category }
+            type: { ...(category && { $contains: category }) }
           }" v-slot="{ data }">
             <ContentRenderer :value="data">
               <!-- <div v-if="loading" class="max-w-md px-4 py-10 mx-auto text-center loader">
