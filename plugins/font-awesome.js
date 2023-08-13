@@ -7,9 +7,13 @@ import {
   faPhone,
   faQuoteLeft,
   faPlus,
+  faArrowUpRightFromSquare,
+  faStar,
+  faStarHalfAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
+  faGoogle,
   faInstagram,
   faLinkedin,
   faWhatsapp,
@@ -25,7 +29,11 @@ library.add(
   faGithub,
   faPhone,
   faQuoteLeft,
-  faPlus
+  faPlus,
+  faArrowUpRightFromSquare,
+  faGoogle,
+  faStar,
+  faStarHalfAlt
 );
 
 config.autoAddCss = false;

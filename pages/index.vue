@@ -25,9 +25,9 @@ export default {
 
     <ThePageHeader :showImage="true"></ThePageHeader>
     <PageWrapper>
+      <VerticalSpacer></VerticalSpacer>
+      <VerticalSpacer></VerticalSpacer>
       <Container class="">
-        <VerticalSpacer></VerticalSpacer>
-        <VerticalSpacer></VerticalSpacer>
         <h2 class="mb-20 text-5xl">Recent work.</h2>
         <ContentQuery path="/work" :limit="3" :sort="{ date: -1, featured: -1 }" v-slot="{ data }">
           <ContentRenderer :value="data">

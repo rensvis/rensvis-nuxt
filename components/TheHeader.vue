@@ -20,14 +20,15 @@ export default {
 
 </script>
 <template>
-  <header class="header flex items-center pt-12 pb-12 px-5 md:pt-36 md:pb-28 md:px-10 lg:px-20 md:text-lg">
+  <header class="flex items-center px-5 pt-12 pb-12 header md:pt-36 md:pb-28 md:px-10 lg:px-20 md:text-lg">
     <NuxtLink to="/">
       <div class="">
         <span class="block font-bold">Rens Vis</span>
-        <span class="block">Frontend Developer, KPN</span>
+        <span class="block">Designer & Developer</span>
+        <!-- <span class="block">Frontend Developer, KPN</span> -->
       </div>
     </NuxtLink>
-    <nav class="ml-auto hidden sm:block">
+    <nav class="hidden ml-auto sm:block">
       <ul class="flex">
         <li class="mx-7">
           <NuxtLink to="/work">Work</NuxtLink>
@@ -38,13 +39,13 @@ export default {
       </ul>
     </nav>
 
-    <div class="sm:hidden ml-auto">
-      <div class="hamburger" v-on:click="toggleMobileMenu" :class="{'hamburger--open': isMobileMenuVisible}">
+    <div class="ml-auto sm:hidden">
+      <div class="hamburger" v-on:click="toggleMobileMenu" :class="{ 'hamburger--open': isMobileMenuVisible }">
         <div class="hamburger__line"></div>
         <div class="hamburger__line"></div>
       </div>
     </div>
-    <div class="mobile-menu text-xl sm:hidden" :class="{ 'mobile-menu--visible': isMobileMenuVisible }">
+    <div class="text-xl mobile-menu sm:hidden" :class="{ 'mobile-menu--visible': isMobileMenuVisible }">
       <ul class="flex">
         <li class="mx-7">
           <NuxtLink to="/" v-on:click="toggleMobileMenu">Home</NuxtLink>

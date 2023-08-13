@@ -2,6 +2,8 @@
 </script>
 
 <template>
+  <Testimonials></Testimonials>
+
   <section>
     <VerticalSpacer></VerticalSpacer>
     <Container class="max-w-3xl">

@@ -2,9 +2,6 @@
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, } from 'swiper';
 
-// import { Pagination } from "swiper";
-
-
 export default {
   props: {
     images: {
