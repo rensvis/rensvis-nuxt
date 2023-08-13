@@ -1,32 +1,59 @@
-<!-- <script setup>
-const title = ref('Rens Vis');
-const description = ref('Rens Vis, Designer & Developer');
-useHead({
-  title,
-  meta: [{
-    name: 'description',
-    content: description
-  }]
-});
-</script> -->
-
-<script>
-export default {
-};
+<script setup lang="ts">
+const logos = [
+  {
+    alt: 'KPN logo',
+    src: '/images/pages/home/kpn-logo.png',
+    url: 'https://kpn.com',
+    ariaLabel: 'KPN website'
+  },
+  {
+    alt: 'Nationale Nederlanden logo',
+    src: '/images/pages/home/nn-logo.png',
+    url: 'https://nn.nl',
+    ariaLabel: 'Nationale Nederlanden website'
+  },
+  {
+    alt: 'Team Rockstars IT logo',
+    src: '/images/pages/home/teamrockstars-logo.png',
+    url: 'https://teamrockstars.nl',
+    ariaLabel: 'Team Rockstars IT website'
+  },
+  {
+    alt: 'Calco logo',
+    src: '/images/pages/home/calco-logo.png',
+    url: 'https://calco.nl',
+    ariaLabel: 'Calco website'
+  },
+];
 </script>
 
 <template>
   <div>
 
     <Head>
-      <Title>Rens Vis</Title>
-      <Meta name="description" content="Rens Vis, Designer & Developer" />
+      <Title>Rens Vis, designer & developer</Title>
+      <Meta name="description" content="Websites with wow-factor" />
     </Head>
 
     <ThePageHeader :showImage="true"></ThePageHeader>
+
     <PageWrapper>
+
       <VerticalSpacer></VerticalSpacer>
+
+      <Container>
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-3 md:gap-6">
+          <a v-for="logo of logos" target="_blank" :href="logo.url" :aria-label="logo.ariaLabel">
+            <img :src="logo.src" :alt="logo.alt"
+              class="object-contain h-10 max-w-[100px] sm:h-12 sm:max-w-[120px] md:h-16 md:max-w-[150px] grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition-all">
+          </a>
+        </div>
+        <p class="text-xs text-center sm:text-sm text-neutral-400" style="text-wrap:balance">Some company's I've worked
+          for.</p>
+      </Container>
+
       <VerticalSpacer></VerticalSpacer>
+
       <Container class="">
         <h2 class="mb-20 text-5xl">Recent work.</h2>
         <ContentQuery path="/work" :limit="3" :sort="{ date: -1, featured: -1 }" v-slot="{ data }">
@@ -64,20 +91,23 @@ export default {
           <h2 class="mb-20 text-5xl">What I do.</h2>
 
           <div class="justify-between lg:flex content-block">
-            <div class="basis-[30%] mb-10 lg:mb-0 shrink-0 grow-0">
-              <h3 class="mb-10 text-2xl font-semibold">Design work</h3>
-              <p>Let's bring your idea to life in a <strong>bold design</strong> that is uniquely yours. Think
-                logos, branding and more!</p>
+            <div class="basis-[30%] mb-10 lg:mb-0 shrink-0 grow-0" style="text-wrap:balance">
+              <h3 class="mb-10 text-2xl font-semibold">Design that stands out</h3>
+              <p>No standard templates here. Let's bring your idea to life in a <span class="font-semibold">bold
+                  design</span> that is uniquely yours.
+                Think logos, branding and more! 🖌️</p>
             </div>
-            <div class="basis-[30%] mb-10 lg:mb-0 shrink-0 grow-0">
-              <h3 class="mb-10 text-2xl font-semibold">Websites and apps</h3>
-              <p>I'll help you create a <strong>lasting online presence</strong> by building an awesome custom website,
-                app or webshop. Your users will thank you.
+            <div class="basis-[30%] mb-10 lg:mb-0 shrink-0 grow-0" style="text-wrap:balance">
+              <h3 class="mb-10 text-2xl font-semibold">Next level websites</h3>
+              <p>I'll help you create a <span class="font-semibold">lasting online presence</span> by building an awesome
+                custom website, app or webshop. Your users will thank you. 🙏
               </p>
             </div>
-            <div class="basis-[30%] mb-10 lg:mb-0 shrink-0 grow-0">
-              <h3 class="mb-10 text-2xl font-semibold">Content</h3>
-              <p>Step up your content game with some <strong>stunning visuals</strong>. Video is my specialty.</p>
+            <div class="basis-[30%] mb-10 lg:mb-0 shrink-0 grow-0" style="text-wrap:balance">
+              <h3 class="mb-10 text-2xl font-semibold">Unbeatable SEO</h3>
+              Beautiful websites with no traffic are lonely places. <span class="font-semibold">Boost your website's
+                visibility</span> with expert SEO techniques. I know
+              Google's secret. 🔍
             </div>
           </div>
 

@@ -7,7 +7,7 @@
   <section>
     <VerticalSpacer></VerticalSpacer>
     <Container class="max-w-3xl">
-      <h2 class="mb-8 text-4xl text-centerr">FAQ.</h2>
+      <h2 class="mb-8 text-4xl">FAQ.</h2>
       <Faq></Faq>
     </Container>
     <VerticalSpacer></VerticalSpacer>
@@ -15,7 +15,7 @@
 
 
   <section
-    class="relative z-10 px-10 py-24 text-center text-white bg-gradient-to-r from-black via-neutral-800 to-black cta">
+    class="relative z-10 px-10 py-32 text-center text-white bg-gradient-to-r from-black via-neutral-800 to-black cta">
     <h2 class="mb-8 text-4xl">Get in touch.</h2>
     <div class="flex flex-col items-center justify-center mx-auto text-lg md:flex-row">
       <a href="https://wa.me/31640999003" target="_blank" class="flex items-center mx-8 my-2 md:my-0">
@@ -55,7 +55,7 @@
   </section>
 
   <footer
-    class="flex items-end justify-center px-10 pt-10 pb-10 text-neutral-200 bg-neutral-900 sm:justify-between md:pt-10 md:text-lg">
+    class="flex items-end justify-center px-10 pt-10 pb-10 border-t-4 text-neutral-200 bg-neutral-900 sm:justify-between md:pt-10 md:text-lg border-neutral-700">
     <div class="flex items-center">
       <div class="w-20 h-px mb-2 mr-4 min-[450px]:mb-0 hidden sm:block"></div>
       <p class="">copyright © {{ new Date().getFullYear() }} Rens Vis</p>

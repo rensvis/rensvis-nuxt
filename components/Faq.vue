@@ -16,14 +16,14 @@ const faqs = [
     question: "Do you provide website maintenance after the project is finished?",
     answer: "Yes, I offer various website maintenance packages depending on your needs. This could include updates, backups, bug fixing, and content changes."
   },
-  {
-    question: "Are your websites mobile-friendly?",
-    answer: "Yes, all of the websites I build are responsive and optimized for mobile devices to ensure a seamless user experience across all devices."
-  },
-  {
-    question: "Do you build web shops too?",
-    answer: "Yes, I have experience in designing e-commerce websites and can create a custom solution to fit your online sales needs."
-  },
+  // {
+  //   question: "Are your websites mobile-friendly?",
+  //   answer: "Yes, all of the websites I build are responsive and optimized for mobile devices to ensure a seamless user experience across all devices."
+  // },
+  // {
+  //   question: "Do you build web shops too?",
+  //   answer: "Yes, I have experience in designing e-commerce websites and can create a custom solution to fit your online sales needs."
+  // },
   {
     question: "Will my website be SEO friendly?",
     answer: "Absolutely! I design all websites with SEO best practices in mind to ensure your site is well-positioned on search engines and will out-compete your competition."
@@ -64,9 +64,12 @@ const faqs = [
   position: relative;
   padding: 24px 0;
 
-  &:hover {
-    .faq-plus {
-      transform: rotate(10deg) scale(1.05);
+  // media query for mobile
+  @media (min-width: 800px) {
+    &:hover {
+      .faq-plus {
+        transform: rotate(10deg) scale(1.05);
+      }
     }
   }
 

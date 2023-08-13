@@ -7,7 +7,6 @@ export default {
   },
   methods: {
     toggleMobileMenu() {
-      console.log('toggleMobileMenu');
       this.isMobileMenuVisible = !this.isMobileMenuVisible;
       if (this.isMobileMenuVisible) {
         document.body.style.overflow = 'hidden';
@@ -60,6 +59,8 @@ export default {
     </div>
 
   </header>
+
+  <div class="overlay" :class="{ 'overlay--visible': isMobileMenuVisible }"></div>
 </template>
 
 <style scoped lang="scss">
@@ -128,5 +129,27 @@ export default {
       margin: 20px 0;
     }
   }
+}
+
+.overlay {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0%;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  visibility: hidden;
+  backdrop-filter: blur(5px);
+
+  &--visible {
+    pointer-events: all;
+    opacity: 100%;
+    visibility: visible;
+  }
+
 }
 </style>

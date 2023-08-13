@@ -75,6 +75,11 @@ const swiperOptions = {
 <template>
   <section class="p-0 bg-neutral-900 text-white lg:h-[650px]">
     <div class="items-center h-full lg:flex">
+      <div class="h-full lg:basis-1/3">
+        <img src="/images/components/testimonials/workers.png" alt="Flex working"
+          class="object-cover w-full h-[500px] sm:h-[600px] md:h-[800px] lg:h-full">
+      </div>
+
       <div class="overflow-hidden lg:basis-2/3 fadein-transition">
         <div class="px-6 py-16 ml-auto mr-0 md:px-14 lg:px-16 container--s">
           <h2 class="mb-20 text-5xl text-bal" style="text-wrap:balance">Kind words from awesome clients.</h2>
@@ -112,10 +117,7 @@ const swiperOptions = {
         </div>
       </div>
 
-      <div class="h-full lg:basis-1/3">
-        <img src="/images/components/testimonials/workers.png" alt="Flex working"
-          class="object-cover w-full h-[500px] sm:h-[600px] md:h-[800px] lg:h-full">
-      </div>
+
 
     </div>
 
